@@ -8,7 +8,8 @@ php:
   - hhvm
 
 script:
-  - php *.php
+  - time php -n -d memory_limit=512M array_memory.php
+  - time php -n -d memory_limit=512M binarytrees.php 15
 
 notifications:
  email: false
